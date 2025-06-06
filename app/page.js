@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./style.module.css";
 import mainLogo from "../public/maintext2.svg"
 import logo from "../public/logo.svg"
+import { redirect } from 'next/navigation';
 
 export default function Home() {
   const vantaRef = useRef(null);
@@ -45,6 +46,7 @@ export default function Home() {
       <div className={styles.frame}>
       <div className={styles.navbar}>
         <Image src={logo} className={styles.logo} alt="logo"></Image>
+        <div> <button className="sign-in" onClick={defer}> sign in </button></div>
       </div>
       <div ref={vantaRef} className={styles.contentBackground}>
         <Image src={mainLogo} className={styles.maintext} alt="Main Text"></Image>
@@ -62,3 +64,7 @@ export default function Home() {
   );
 }
 
+
+function defer(){
+  redirect('/sign-in')
+}

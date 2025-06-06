@@ -31,6 +31,8 @@ export default function Page() {
     <div id="vanta-bg" style={{ zIndex : 1, height:'100vh', margin: 0, padding: 0,}}> 
     <div style={{  display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh',width:'100vw', zIndex: 2,}}> 
     <SignUp
+      afterSignInUrl={redirect('/home')}
+      afterSignUnUrl= {redirect('/home')}
     />
 
     </div>

@@ -1,0 +1,91 @@
+
+/* TODO
+Fix oveflow behavior with homepage
+
+Fix vanta background, make it less dull 
+
+*/
+
+.background {
+    z-index: -1;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bgColors);
+    overscroll-behavior: none;
+} /* fix overflow scroll behavior  NOT FIXED */
+
+.sideBar{
+width: 50px;
+height: 100vh;
+background-color: var(--topnavColors);
+}
+
+.navBar{
+width: 100%;
+height: 50px;
+background-color: #000000;
+}
+
+.bgContainer{
+    width: 100%;
+    height: 50vh;
+    display:flex;
+    /* with flex display you must justify flex direction or, contents will be in the same place in the center */
+
+}
+
+.vantabg{
+    z-index: 0;
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+.backgroundHeader{
+    text-align: left;
+    margin-left: 50px;
+    font-family: var(--font-roboto-mono);
+    font-size:40px;
+}
+
+.headerP{
+    font-size: 20px;
+}
+
+.savedProjects{
+    overflow: hidden;
+    
+    align-self: left;
+    width: 900px;
+    height: 400px;
+    margin-left: 0px;
+    margin-top: 100px;
+    font-family:  var(--font-roboto-mono);
+    font-size: 20px;
+    color: #000000; /* this is font color */
+    border-radius: 5%;
+   
+}
+.savedProjectsH{
+    display: flex;
+    justify-self: center;
+    align-items: flex-start;
+}
+
+.projectContainer{
+  
+    width: 800px;
+    height: 250px;
+    margin:0px;
+    background-color: #000000;
+    align-self: center;
+    margin-top: 10px;
+    margin-left: 0px;
+    border-radius: 20px; 
+    justify-self: center;
+    opacity: 80%;
+}
