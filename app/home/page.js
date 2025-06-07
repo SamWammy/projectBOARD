@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import styles from "./style.module.css";
 
+
+
 export default function Page() {
     
   const vantaRef = useRef(null);
@@ -47,14 +49,24 @@ export default function Page() {
             </h1>
         </div>
       </div>
-       <div className={styles.navBar}></div>
-
+       <div className={styles.navBar}>
+        
+       </div>
+        <div className={styles.projectsAndResources}>
        <div className={styles.savedProjects}> 
         <h1 className={styles.savedProjectsH}> Saved Projects</h1>
         <div className={styles.projectContainer}>
-
+       
         </div>
        </div>
+       <div className={styles.resourcesSection}>
+        <h1> Resources </h1>
+        <div className={styles.resources}>
+       </div>
+      
+       </div>
+       </div>
+
     </div>
   );
 }
