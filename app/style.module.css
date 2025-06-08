@@ -45,6 +45,7 @@
   transform: translateX(-50%); 
   width: auto;
   gap: 125px;
+  border-bottom:#303841; 
 }
 .nav1{
   z-index: 7;
@@ -270,12 +271,43 @@
 .formSect{
   display: grid;
   gap: 10px;
+  /* align-items: center; */
+  align-content: center;
   /* margin: ; */
 }
 
 .nameSection{
   height: 55px;
-  width: 50%;
+  width: 40vw;
   background-color: #d9d9d9;
   border-radius: 38px;
+  padding-left: 20px; /* content padding*/
+  border: none;   
+  font-size: 16px;    
+}
+.messSection{
+  height: 40vh;
+  width: 40vw;
+  background-color: #d9d9d9;
+  border-radius: 38px;
+  padding: 20px; /* content padding*/
+  border: none;   
+  font-size: 16px;  
+
+}
+
+.submitButton {
+  height: 40px;
+  width: 100px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.successMessage {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
 }

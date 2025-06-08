@@ -7,7 +7,7 @@ import logo from "../public/logo.svg"
 import middlePhoto from "../public/kermit.webp"
 import instaIcon from "../public/instagram-2-1-logo-svgrepo-com.svg"
 import emailIcon from "../public/gmail-icon-logo-svgrepo-com.svg"
-import landing from "../app/landingBack/landing.php"
+// import landing from "../app/landingBack/landing.php"
 export default function Home() {
   const vantaRef = useRef(null);
   const [vantaEffect, setVantaEffect] = useState(null);
@@ -41,6 +41,11 @@ export default function Home() {
     };
   }, [vantaEffect]);
 
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
   const clickRef = useRef(null);
   const blogRef = useRef(null);
   const contactRef = useRef(null);
@@ -48,6 +53,31 @@ export default function Home() {
   // const signupRef = useRef(null);
   // const instaRef = useRef(null);
   // const emailRef = useRef(null);
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append('name', name);
+  formData.append('email', email);
+
+  try {
+    const res = await fetch('/landing.php', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (res.ok) {
+      setSubmitted(true);
+      setName('');
+      setEmail('');
+    } else {
+      alert('Failed to send. Please try again.');
+    }
+  } catch (err) {
+    console.error('Error submitting form:', err);
+  }
+};
   return (
     <main>
       <div className={styles.frame}>
@@ -117,6 +147,7 @@ export default function Home() {
       <div ref={contactRef} className={styles.bottomBackground}>
         <div className={styles.bottomOrg}>
         <div className={styles.bottomLink}>
+          {/*to be linked to other pages*/}
           <div className={styles.link1}>About us</div>
           <div className={styles.link1}>FAQ</div>
           <div className={styles.link1}>IDK</div>
@@ -126,12 +157,15 @@ export default function Home() {
           <Image src={emailIcon} className={styles.svgIcon} alt='email'></Image>
         </div>
         </div>
-        <form method="POST" action={landing} className={styles.formSect}>
-          {/* <label htmlFor="name">Your Name:</label> */}
-          <input type="text" name="name" id="name" className={styles.nameSection} placeholder="Your Name" />
-          {/* <label for="email">email</label> */}
-          <input type="email" name="email" id="email" required></input>
+        <form onSubmit={handleSubmit} className={styles.formSect}>
+          <input type="text" name="name" id="name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" 
+          className={styles.nameSection} required/>
+          <input type="email" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" 
+          className={styles.nameSection} required/>
+          <textarea type="message" name="message" id="message" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Message" 
+          className={styles.messSection} required/>
           <button type="submit" className={styles.submitButton}>Send</button>
+          {submitted && <p className={styles.successMessage}>Thank you! Your message has been sent.</p>}
         </form>
       </div>
       </div>
