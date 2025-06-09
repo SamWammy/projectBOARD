@@ -60,6 +60,7 @@ const handleSubmit = async (e) => {
   const formData = new FormData();
   formData.append('name', name);
   formData.append('email', email);
+  formData.append('message', message);
 
   try {
     const res = await fetch('/landing.php', {
@@ -71,6 +72,7 @@ const handleSubmit = async (e) => {
       setSubmitted(true);
       setName('');
       setEmail('');
+      setMessage('');
     } else {
       alert('Failed to send. Please try again.');
     }

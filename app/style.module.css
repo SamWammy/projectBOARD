@@ -279,7 +279,7 @@
 .nameSection{
   height: 55px;
   width: 40vw;
-  background-color: #d9d9d9;
+  background-color: whitesmoke;
   border-radius: 38px;
   padding-left: 20px; /* content padding*/
   border: none;   
@@ -288,7 +288,7 @@
 .messSection{
   height: 40vh;
   width: 40vw;
-  background-color: #d9d9d9;
+  background-color: whitesmoke;
   border-radius: 38px;
   padding: 20px; /* content padding*/
   border: none;   
