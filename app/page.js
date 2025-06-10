@@ -5,10 +5,15 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./style.module.css";
 import mainLogo from "../public/maintext2.svg"
 import logo from "../public/logo.svg"
-import middlePhoto from "../public/kermit.webp"
+//import middlePhoto from "../public/kermit.webp"
 import instaIcon from "../public/instagram-2-1-logo-svgrepo-com.svg"
 import emailIcon from "../public/gmail-icon-logo-svgrepo-com.svg"
 // import landing from "../app/landingBack/landing.php"
+import { redirect } from 'next/navigation';
+
+
+
+
 export default function Home() {
   const vantaRef = useRef(null);
   const [vantaEffect, setVantaEffect] = useState(null);
@@ -98,7 +103,7 @@ const handleSubmit = async (e) => {
         }}>Contact</div>
         </div>
         <div className={styles.buttonSection}>
-        <p className={styles.signin}>Sign in</p>
+          <button className={ styles.signin} onClick={defer}>Sign-In</button>
         <p className={styles.signup}>Login</p>
         </div>
       </div>
@@ -144,7 +149,9 @@ const handleSubmit = async (e) => {
                </div>
           </div>
         </div>
+        {/*
         <Image src={middlePhoto} className={styles.middlePhoto} alt='photo'></Image>
+        commenting this photo out temporarily*/}
         </div>
       
       <div ref={contactRef} className={styles.bottomBackground}>
@@ -175,4 +182,8 @@ const handleSubmit = async (e) => {
     </main>
   );
 
+}
+
+function defer(){
+  redirect('/sign-in')
 }
