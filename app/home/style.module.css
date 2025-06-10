@@ -79,9 +79,11 @@ background-color: #000000;
 }
 .savedProjectsH{
     justify-self: center;
+    
 }
 
 .projectContainer{
+    margin-top: 10px;
     width: 800px;
     height: 250px;
     background-color: #000000;
@@ -96,8 +98,10 @@ background-color: #000000;
     font-family: var(--font-roboto-mono);
     color: #000000;
     justify-items: center;
+
 }
 .resources{
+ margin-top: 10px;
  position: relative;
  width: 280px;
  height: 280px;
@@ -121,7 +125,7 @@ gap: 0px;
 
 .resourceBox{
     width: 130px;
-    height: 150px;
+    height: 130px;
     display: flex;
     justify-content: center;
     align-items: self-start;
