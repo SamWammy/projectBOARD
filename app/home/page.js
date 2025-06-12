@@ -31,7 +31,7 @@ export default function Page() {
           backgroundAlpha: 1.0,
         });
         setVantaEffect(effect);
-        setIsVantaReady(true); // Set ready state when Vanta is loaded
+        setIsVantaReady(true); 
       });
     }
 
@@ -40,13 +40,17 @@ export default function Page() {
     };
   }, [vantaEffect]);
 
-  // Show loading state or nothing until Vanta is ready
+  // loading state or nothing until Vanta is ready
+  // tweak this loading state 
+  //maybe add a picture in place before the animation
+  // that way theres a split sec pic of image instead of blank white space, then the animation continues 
+
   if (!isVantaReady) {
     return (
       <div className={styles.background}>
         <div className={styles.bgContainer}>
           <div ref={vantaRef} className={styles.vantabg}>
-            {/* Vanta will load here */}
+            {}
           </div>
         </div>
       </div>
@@ -102,6 +106,8 @@ export default function Page() {
           </div>
         </div>
       </div>
+
+      {/* new additions go here delete this comment when adding */}
     </div>
   );
 }
