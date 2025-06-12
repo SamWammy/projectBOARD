@@ -63,13 +63,26 @@ export default function Page() {
        
         </div>
        </div>
+
+       {/* 
+       The section below is the react code for the resoruces section,this is the grid with the 4 images, 
+       each image on click directs user to an external link
+       */}
        <div className={styles.resourcesSection}>
         <h1> Resources </h1>
         <div className={styles.resources}>
+          <a href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener noreferrer">
          <div className={styles.resourceBox}> <Image src={gitPNG} alt="github image" /> </div>
+         </a>
+         <a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">
           <div className={styles.resourceBox}> <Image src={MDNPNG} alt="mdn image" /> </div>
+          </a>
+          <a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">
           <div className={styles.resourceBox}> <Image src={npmPNG} alt="npm image" /> </div>
+          </a>
+          <a href="https://vercel.com/" target="_blank" rel="noopener noreferrer"> 
           <div className={styles.resourceBox}> <Image src={vercelIcon} alt="vercel image" /> </div>
+          </a>
          
        </div>
        </div>

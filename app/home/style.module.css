@@ -4,6 +4,10 @@ Fix oveflow behavior with homepage
 
 Fix vanta background, make it less dull 
 
+Fix Font size
+
+Alllign resource seciton 
+
 */
 
 .background {
@@ -62,7 +66,7 @@ background-color: #000000;
   flex-direction: row;
   justify-content: flex-start; 
   align-items: flex-start;
-  gap: 20px;
+  gap: 70px;
   
 }
 
@@ -72,7 +76,7 @@ background-color: #000000;
     width: 900px;
     height: 300px;
     font-family:  var(--font-roboto-mono);
-    font-size: 20px;
+    font-size: 30px;
     color: #000000; /* this is font color */
 
    
@@ -94,19 +98,22 @@ background-color: #000000;
 }
 
 .resourcesSection{
-    font-size: 20px;
+    font-size: 30px;
+    font-weight:500;
     font-family: var(--font-roboto-mono);
     color: #000000;
     justify-items: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
 
 }
 .resources{
  margin-top: 10px;
  position: relative;
- width: 280px;
- height: 280px;
+ width: 200px;
+ height: 200px;
 
- border-radius: 20px;
  opacity: 80%;
 
 
@@ -119,20 +126,25 @@ background-color: #000000;
  display: grid;
  grid-template-columns: 1fr 1fr;
  grid-template-rows: 1fr 1fr;
-gap: 0px;
+ gap: 20px; 
+
  
 }
 
 .resourceBox{
-    width: 130px;
-    height: 130px;
+    background-color: var(--bgColors-2);
     display: flex;
     justify-content: center;
-    align-items: self-start;
-
+    align-items: center;
+    height: 120px;
+    width: 120px;
+    border-radius: 20px;
+    
 }
 
 .resourceBox img{
+    height: 90px;
+    width: 90px;
    border-radius: 20px;
 
 }
