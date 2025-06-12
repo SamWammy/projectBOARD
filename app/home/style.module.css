@@ -1,7 +1,5 @@
 
 /* TODO
-Fix oveflow behavior with homepage
-
 Fix vanta background, make it less dull 
 
 Fix Font size
@@ -16,7 +14,8 @@ Alllign resource seciton
     min-height: 100vh;
     background-color: var(--bgColors);
     overscroll-behavior: none;
-} /* fix overflow scroll behavior  NOT FIXED */
+    overflow-x: hidden;
+} /* fix overflow scroll behavior   FIXED */
 
 .sideBar{
 width: 50px;
@@ -51,14 +50,40 @@ background-color: #000000;
 
 .backgroundHeader{
     text-align: left;
+    margin-left: 0;
     margin-left: 50px;
     font-family: var(--font-roboto-mono);
     font-size:40px;
     /* test 2*/
+    width: 10ch ; /* this makes it so header doesnt take up entire width*/
+    overflow: hidden;
+    border-right: .10em solid #ffffff;
+    white-space: nowrap;
+    letter-spacing: .15em;
+    z-index: 1;
+
+    animation:
+    typing 1s steps(20,end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing{
+    from {width: 0}
+    to {width: 10ch}
+}
+
+@keyframes blink-caret{
+    from,to {border-color: transparent}
+    50% {border-color: #ffffff ;}
 }
 
 .headerP{
+    z-index: 1;
     font-size: 20px;
+    text-align: left;
+    margin-left: 50px;
+    font-family: var(--font-roboto-mono);
+
 }
 
 
@@ -67,7 +92,7 @@ background-color: #000000;
   flex-direction: row;
   justify-content: flex-start; 
   align-items: flex-start;
-  gap: 70px;
+  gap: 200px;
   
 }
 
@@ -76,9 +101,9 @@ background-color: #000000;
     align-self: left;
     width: 900px;
     height: 300px;
-    font-family:  var(--font-roboto-mono);
+    font-family:  var(--font-body);
     font-size: 30px;
-    color: #000000; /* this is font color */
+    color: var(--fgColors); 
 
    
 }
@@ -101,8 +126,8 @@ background-color: #000000;
 .resourcesSection{
     font-size: 30px;
     font-weight:500;
-    font-family: var(--font-roboto-mono);
-    color: #000000;
+    font-family: var(--font-body);
+    color: var(--fgColors);
     justify-items: center;
     align-items: center;
     width: 200px;
@@ -112,12 +137,6 @@ background-color: #000000;
 .resources{
  margin-top: 10px;
  position: relative;
- width: 200px;
- height: 200px;
-
- opacity: 80%;
-
-
 
  /* 
  we want to house a grid in the resources section 
@@ -136,16 +155,34 @@ background-color: #000000;
     background-color: var(--bgColors-2);
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 120px;
+    height: 150px;
     width: 120px;
     border-radius: 20px;
-    
+    position: relative;
+    border: 2px solid transparent ;
+  transition: border-color 0.5s ease, box-shadow 0.5s ease;
 }
 
+.resourceBox:hover{
+    border-color: #9a0d0d;
+    border-width: 3px;
+     box-shadow: 0 0 12px 4px #9a0d0d;
+    transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+
 .resourceBox img{
+    position: relative;
+    align-self: self-start;
+    margin-top: 5px;
     height: 90px;
     width: 90px;
    border-radius: 20px;
+}
+.resourceBoxHeader{
+    opacity: 80%;
+    position: absolute;
+    bottom: 0;
+    font-size: 25px;
 
 }
