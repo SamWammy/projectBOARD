@@ -27,6 +27,22 @@ background-color: var(--topnavColors);
 width: 100%;
 height: 50px;
 background-color: #000000;
+display: flex;
+justify-content: left;
+padding: 0 30px;
+align-items: center;
+
+}
+.navBar ul{
+    list-style: none;
+    display: flex;
+   gap: 20px;
+}
+.navBar ul li{
+}
+
+.navBarItem{
+ align-self: left;;
 }
 
 .bgContainer{

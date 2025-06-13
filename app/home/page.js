@@ -7,6 +7,10 @@ import MDNPNG from "../../public/MDN-icon.png"
 import npmPNG from "../../public/npm-icon.png"
 import vercelIcon from "../../public/vercel-icon.png"
 import Image from 'next/image'
+import { UserProfile } from "@clerk/nextjs";
+import { SignedIn,UserButton } from "@clerk/nextjs";
+
+
 
 export default function Page() {
   const vantaRef = useRef(null);
@@ -67,6 +71,22 @@ export default function Page() {
       </div>
 
       <div className={styles.navBar}>
+        <ul> {/* react list items are below for nav bar*/}
+          <li >
+            <UserButton 
+              appearance={{
+                elements: {
+                  userButtonAvatarBox: {
+                    width: "40px",
+                    height: "40px"
+                  }
+                }
+              }}
+            />
+
+          </li>
+
+        </ul>
       </div>
 
       <div className={styles.projectsAndResources}>
