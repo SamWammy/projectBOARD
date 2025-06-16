@@ -1,0 +1,116 @@
+
+/* TODO
+Fix oveflow behavior with homepage
+
+Fix vanta background, make it less dull 
+
+*/
+
+.background {
+    z-index: -1;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bgColors);
+    overscroll-behavior: none;
+} /* fix overflow scroll behavior  NOT FIXED */
+
+.sideBar{
+width: 50px;
+height: 100vh;
+background-color: var(--topnavColors);
+}
+
+.navBar{
+width: 100%;
+height: 50px;
+background-color: #000000;
+}
+
+.bgContainer{
+    width: 100%;
+    height: 50vh;
+    display:flex;
+    /* with flex display you must justify flex direction or, contents will be in the same place in the center */
+
+}
+
+.vantabg{
+    z-index: 0;
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+.backgroundHeader{
+    text-align: left;
+    margin-left: 50px;
+    font-family: var(--font-roboto-mono);
+    font-size:40px;
+}
+
+.headerP{
+    font-size: 20px;
+}
+
+
+.projectsAndResources{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; 
+  align-items: flex-start;
+  gap: 20px;
+  
+}
+
+.savedProjects{
+    position: relative;
+    align-self: left;
+    width: 900px;
+    height: 300px;
+    font-family:  var(--font-roboto-mono);
+    font-size: 20px;
+    color: #000000; /* this is font color */
+
+   
+}
+.savedProjectsH{
+    justify-self: center;
+}
+
+.projectContainer{
+    width: 800px;
+    height: 250px;
+    background-color: #000000;
+    border-radius: 20px; 
+    justify-self: center;
+    opacity: 80%;
+ 
+}
+
+.resourcesSection{
+    font-size: 20px;
+    font-family: var(--font-roboto-mono);
+    color: #000000;
+    justify-items: center;
+}
+.resources{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ position: relative;
+
+ width: 300px;
+ height: 350px;
+ background-color: #000000;
+ border-radius: 20px;
+ opacity: 80%;
+
+ /* 
+ we want to house a grid in the resources section 
+ this grid will be images or linkes to varous helpful resources
+ */
+}

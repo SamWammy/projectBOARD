@@ -1,3 +1,4 @@
+
 "use client";
 import Image from 'next/image'
 import { useEffect, useRef, useState } from "react";
@@ -173,4 +174,5 @@ const handleSubmit = async (e) => {
       </div>
     </main>
   );
+
 }
