@@ -1,6 +1,7 @@
 'use client'
 import { SignIn } from '@clerk/nextjs'
 import { useEffect } from 'react'
+import { redirect } from 'next/navigation'
 
 export default function Page() {
 
@@ -29,8 +30,9 @@ export default function Page() {
     <div id= "vanta-bg" style={{ zIndex : 1, height:'100vh', margin: 0, padding: 0,}} > 
   <div   style={{  display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh',width:'100vw', zIndex: 2,}}> 
   <SignIn 
-        afterSignInUrl="/home" 
-        afterSignUpUrl="/home"
+        afterSignInUrl= {redirect('/home')}
+        afterSignUpUrl= {redirect('/home')}
+
   />
   </div>
   </div>
