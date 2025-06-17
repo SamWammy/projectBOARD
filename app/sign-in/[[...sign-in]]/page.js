@@ -2,7 +2,7 @@
 import { SignIn } from '@clerk/nextjs'
 import { useEffect } from 'react'
 import { redirect } from 'next/navigation'
-
+import { UserButton } from '@clerk/nextjs'
 export default function Page() {
 
      useEffect(() => {
@@ -29,9 +29,10 @@ export default function Page() {
   return( 
     <div id= "vanta-bg" style={{ zIndex : 1, height:'100vh', margin: 0, padding: 0,}} > 
   <div   style={{  display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh',width:'100vw', zIndex: 2,}}> 
+    <UserButton/>
   <SignIn 
-        afterSignInUrl= {redirect('/home')}
-        afterSignUpUrl= {redirect('/home')}
+        afterSignInUrl= '/home'
+        afterSignUpUrl= '/home'
 
   />
   </div>
