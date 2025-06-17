@@ -31,8 +31,8 @@ export default function Page() {
   <div   style={{  display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh',width:'100vw', zIndex: 2,}}> 
     <UserButton/>
   <SignIn 
-        afterSignInUrl= {redirect('/home')}
-        afterSignUpUrl= {redirect('/home')}
+        afterSignInUrl= '/home'
+        afterSignUpUrl= '/home'
 
   />
   </div>
