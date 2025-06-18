@@ -17,32 +17,32 @@ Alllign resource seciton
     overflow-x: hidden;
 } /* fix overflow scroll behavior   FIXED */
 
-.sideBar{
-width: 50px;
-height: 100vh;
-background-color: var(--topnavColors);
-}
+
+/* 
+removed this side bar section, i dont think we'll have one here
+*/
 
 .navBar{
 width: 100%;
-height: 50px;
+height: 6vh;
 background-color: #000000;
 display: flex;
 justify-content: left;
-padding: 0 30px;
+/* top-down left-right*/
+padding: 0 1.5vw;
 align-items: center;
 
 }
 .navBar ul{
     list-style: none;
     display: flex;
-   gap: 20px;
+   gap: 3vw; /* this unit is relative to the nav bar gap*/
 }
 .navBar ul li{
 }
 
 .navBarItem{
- align-self: left;;
+ align-self: self-start;;
 }
 
 .bgContainer{
@@ -60,16 +60,17 @@ align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-   
+    /* font size deafults to 16 px*/
 }
 
 
 .backgroundHeader{
+    color: var(--fgColors);
     text-align: left;
     margin-left: 0;
-    margin-left: 50px;
+    margin-left: 3rem;
     font-family: var(--font-roboto-mono);
-    font-size:40px;
+    font-size:3em; /* rem and em both unassigned so deafult 16px */
     /* test 2*/
     width: 10ch ; /* this makes it so header doesnt take up entire width*/
     overflow: hidden;
@@ -93,11 +94,14 @@ align-items: center;
     50% {border-color: #ffffff ;}
 }
 
+/* need to make this animation better FIx after finishing up page*/
+
 .headerP{
+    color: var(--fgColors);
     z-index: 1;
-    font-size: 20px;
+    font-size: 1.5em;
     text-align: left;
-    margin-left: 50px;
+    margin-left: 3rem;
     font-family: var(--font-roboto-mono);
 
 }
@@ -108,30 +112,32 @@ align-items: center;
   flex-direction: row;
   justify-content: flex-start; 
   align-items: flex-start;
-  gap: 200px;
+  gap: 12.5rem;
+  font-size: 30px;
   
 }
 
 .savedProjects{
     position: relative;
-    align-self: left;
-    width: 900px;
-    height: 300px;
+    align-self: self-start;
+    margin-left: 3rem;
+    width: 50rem;
+    height: 20rem;
     font-family:  var(--font-body);
-    font-size: 30px;
     color: var(--fgColors); 
 
    
 }
 .savedProjectsH{
     justify-self: center;
+    font-size: 1em;
     
 }
 
 .projectContainer{
-    margin-top: 10px;
-    width: 800px;
-    height: 250px;
+    margin-top: .5rem;
+    width: 50rem;
+    height: 15rem;
     background-color: #000000;
     border-radius: 20px; 
     justify-self: center;
@@ -140,18 +146,17 @@ align-items: center;
 }
 
 .resourcesSection{
-    font-size: 30px;
-    font-weight:500;
+    font-size: 1em;
     font-family: var(--font-body);
     color: var(--fgColors);
     justify-items: center;
     align-items: center;
-    width: 200px;
-    height: 200px;
+    width: 15rem;
+    height: 20rem;
 
 }
 .resources{
- margin-top: 10px;
+ margin-top: .5rem;
  position: relative;
 
  /* 
@@ -162,7 +167,7 @@ align-items: center;
  display: grid;
  grid-template-columns: 1fr 1fr;
  grid-template-rows: 1fr 1fr;
- gap: 20px; 
+ gap: 1rem; 
 
  
 }
@@ -171,8 +176,8 @@ align-items: center;
     background-color: var(--bgColors-2);
     display: flex;
     justify-content: center;
-    height: 150px;
-    width: 120px;
+    height: 9rem;
+    width: 7.5rem;
     border-radius: 20px;
     position: relative;
     border: 2px solid transparent ;
@@ -190,9 +195,9 @@ align-items: center;
 .resourceBox img{
     position: relative;
     align-self: self-start;
-    margin-top: 5px;
-    height: 90px;
-    width: 90px;
+    margin-top: .5rem;
+    height: 5.7rem;
+    width: 5.7rem;
    border-radius: 20px;
 }
 .resourceBoxHeader{
