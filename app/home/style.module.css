@@ -8,9 +8,10 @@ Alllign resource seciton
 
 */
 
+
 .background {
     z-index: -1;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     background-color: var(--bgColors);
     overscroll-behavior: none;
@@ -46,7 +47,7 @@ align-items: center;
 }
 
 .bgContainer{
-    width: 100%;
+    width: 100vw;
     height: 50vh;
     display:flex;
     /* with flex display you must justify flex direction or, contents will be in the same place in the center */
@@ -68,9 +69,9 @@ align-items: center;
     color: var(--fgColors);
     text-align: left;
     margin-left: 0;
-    margin-left: 3rem;
+    margin-left: 1.5vw;
     font-family: var(--font-roboto-mono);
-    font-size:3em; /* rem and em both unassigned so deafult 16px */
+    font-size:4vw; /* rem and em both unassigned so deafult 16px */
     /* test 2*/
     width: 10ch ; /* this makes it so header doesnt take up entire width*/
     overflow: hidden;
@@ -99,12 +100,13 @@ align-items: center;
 .headerP{
     color: var(--fgColors);
     z-index: 1;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     text-align: left;
-    margin-left: 3rem;
+    margin-left: 1.5vw;
     font-family: var(--font-roboto-mono);
 
 }
+
 
 
 .projectsAndResources{
@@ -112,32 +114,30 @@ align-items: center;
   flex-direction: row;
   justify-content: flex-start; 
   align-items: flex-start;
-  gap: 12.5rem;
+  gap: 10vw;
   font-size: 30px;
-  
+  width: 100vw;
 }
 
 .savedProjects{
     position: relative;
     align-self: self-start;
-    margin-left: 3rem;
-    width: 50rem;
-    height: 20rem;
+    margin-left: 3vw;
     font-family:  var(--font-body);
     color: var(--fgColors); 
-
-   
 }
 .savedProjectsH{
     justify-self: center;
-    font-size: 1em;
+    font-size: 2vw;
     
 }
 
+
+/* this is the black box*/
 .projectContainer{
     margin-top: .5rem;
-    width: 50rem;
-    height: 15rem;
+    width: 60vw;
+    height: 15vw;
     background-color: #000000;
     border-radius: 20px; 
     justify-self: center;
@@ -146,24 +146,20 @@ align-items: center;
 }
 
 .resourcesSection{
-    font-size: 1em;
+    font-size: 2vw;
     font-family: var(--font-body);
     color: var(--fgColors);
     justify-items: center;
     align-items: center;
-    width: 15rem;
-    height: 20rem;
 
 }
 .resources{
  margin-top: .5rem;
  position: relative;
-
  /* 
  we want to house a grid in the resources section 
  this grid will be images or linkes to varous helpful resources
  */
-
  display: grid;
  grid-template-columns: 1fr 1fr;
  grid-template-rows: 1fr 1fr;
@@ -176,8 +172,8 @@ align-items: center;
     background-color: var(--bgColors-2);
     display: flex;
     justify-content: center;
-    height: 9rem;
-    width: 7.5rem;
+    height: 21vh;
+    width: 10vw;
     border-radius: 20px;
     position: relative;
     border: 2px solid transparent ;
@@ -196,14 +192,14 @@ align-items: center;
     position: relative;
     align-self: self-start;
     margin-top: .5rem;
-    height: 5.7rem;
-    width: 5.7rem;
+    height: 14vh;
+    width: 8vw;
    border-radius: 20px;
 }
 .resourceBoxHeader{
     opacity: 80%;
     position: absolute;
     bottom: 0;
-    font-size: 25px;
+    font-size: 1.5vw;
 
 }

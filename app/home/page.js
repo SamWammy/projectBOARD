@@ -88,7 +88,6 @@ export default function Page() {
 
         </ul>
       </div>
-
       <div className={styles.projectsAndResources}>
         <div className={styles.savedProjects}>
           <h1 className={styles.savedProjectsH}> Saved Projects</h1>
