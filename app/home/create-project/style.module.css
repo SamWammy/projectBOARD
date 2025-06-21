@@ -1,0 +1,25 @@
+.frame {
+  z-index: 0;
+  background: black;
+  width: 100%;
+  min-height: 100vh;
+  height: 2970px;
+}
+
+.navbar {
+  position: static;
+  height: 2.25%;
+  width: 100%;
+  background-color: #444444;
+  display: flex;
+  align-items: center;
+  padding-left: 7vw;
+  z-index: 1;
+}
+
+.formBack {
+  background-color: #6d4a4a;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
