@@ -9,7 +9,7 @@ import vercelIcon from "../../public/vercel-icon.png"
 import Image from 'next/image'
 import { UserProfile } from "@clerk/nextjs";
 import { SignedIn,UserButton } from "@clerk/nextjs";
-
+import {supabase} from "../utils/supabase/client"
 
 
 export default function Page() {
@@ -131,4 +131,12 @@ export default function Page() {
     </div>
   );
   
+}
+
+export function Card({projName,projTechStack,projFocus}){
+  return (
+    <div>className={styles.Card} 
+    <h1> {projName} </h1>
+    </div>
+  )
 }
