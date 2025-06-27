@@ -93,6 +93,7 @@ export default function Page() {
         <div className={styles.savedProjects}>
           <h1 className={styles.savedProjectsH}> Saved Projects</h1>
           <div className={styles.projectContainer}>
+            {Card("temp","blah","blerg")}
           </div>
         </div>
 
@@ -135,8 +136,8 @@ export default function Page() {
 
 export function Card({projName,projTechStack,projFocus}){
   return (
-    <div>className={styles.Card} 
-    <h1> {projName} </h1>
+    <div className={styles.Card} >
+    <h1> {projName} bro</h1>
     </div>
   )
 }

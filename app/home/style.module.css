@@ -122,12 +122,15 @@ Align resource section
 	margin-top: 0.5rem;
 	width: 100%;
 	min-height: 30vh;
-	background-color: #000000;
+	background-color: var(--bgColors-2);
 	border-radius: 20px;
 	justify-self: center;
-	opacity: 80%;
+    justify-content: self-start;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    border: 1px solid rgb(117, 111, 111);
 }
-
 .resourcesSection {
 	font-family: var(--font-body);
 	color: var(--fgColors);
@@ -184,3 +187,14 @@ Align resource section
 	bottom: 0;
 	font-size: clamp(1rem, 2vw, 1.5rem);
 }
+
+.Card{
+    width: 25%;
+    min-height: 27vh;
+    background-color: #3f3939;
+    display: flex;
+    align-self: center;
+    margin-left: 15px;
+    border-radius: 5%;
+}
+/* justify self centers horizonticlly*/
