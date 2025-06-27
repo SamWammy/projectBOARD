@@ -11,7 +11,9 @@
   "dependencies": {
     "@clerk/nextjs": "^6.21.0",
     "@next/font": "^14.2.15",
+    "@supabase/supabase-js": "^2.50.0",
     "next": "15.3.2",
+    "pg": "^8.16.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "three": "^0.176.0",
