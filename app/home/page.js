@@ -7,12 +7,15 @@ import MDNPNG from "../../public/MDN-icon.png"
 import npmPNG from "../../public/npm-icon.png"
 import vercelIcon from "../../public/vercel-icon.png"
 import Image from 'next/image'
-import { UserProfile } from "@clerk/nextjs";
+import { SignedOut, UserProfile } from "@clerk/nextjs";
 import { SignedIn,UserButton } from "@clerk/nextjs";
 import {supabase} from "../utils/supabase/client"
+import { redirect } from "next/navigation";
+
 
 
 export default function Page() {
+
   const vantaRef = useRef(null);
   const [vantaEffect, setVantaEffect] = useState(null);
   const [isVantaReady, setIsVantaReady] = useState(false);
@@ -62,6 +65,7 @@ export default function Page() {
   }
 
   return (
+
     <div className={styles.background}>
       <div className={styles.bgContainer}>
         <div ref={vantaRef} className={styles.vantabg}>
@@ -130,6 +134,7 @@ export default function Page() {
 
       {/* new additions go here delete this comment when adding */}
     </div>
+
   );
   
 }
@@ -137,7 +142,10 @@ export default function Page() {
 export function Card({projName,projTechStack,projFocus}){
   return (
     <div className={styles.Card} >
-    <h1> {projName} bro</h1>
+      <Image src={gitPNG} alt="placeholder"/>
+    <h1> {projName} TaskMatch</h1>
+    <h2>  Web Development</h2>
     </div>
   )
 }
+/* card doesnt need to hold all information just a preview, so maybe focus, title, and*/
